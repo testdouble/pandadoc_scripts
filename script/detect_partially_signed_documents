@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require "bundler"
+Bundler.setup
+
+require_relative "../lib/opts"
+require_relative "../lib/commands/detect_partially_signed_documents"
+
+options = Opts.parse
+Commands::DetectPartiallySignedDocuments.call(options)
